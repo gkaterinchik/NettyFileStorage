@@ -11,6 +11,6 @@ public class Decoder extends ReplayingDecoder<Void> {
 
     @Override
     protected void decode(ChannelHandlerContext channelHandlerContext, ByteBuf byteBuf, List<Object> list) throws Exception {
-
+list.add((Object)byteBuf);
     }
 }

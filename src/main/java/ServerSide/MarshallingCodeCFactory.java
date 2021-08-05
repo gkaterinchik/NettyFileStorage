@@ -7,11 +7,6 @@ import org.jboss.marshalling.MarshallingConfiguration;
 
 public final class MarshallingCodeCFactory {
 
-    /**
-     * Создание декодера маршаллинга Jboss MarshallingDecoder
-     *
-     * @return MarshallingDecoder
-     */
     public static MarshallingDecoder buildMarshallingDecoder() {
         System.out.println("Creat Marshaling Decoder");
 // Сначала получите объект экземпляра Marshalling с помощью профессионального метода класса инструмента Marshalling. Параметр серийной идентификации создает объект фабрики сериализации Java.
@@ -19,7 +14,7 @@ public final class MarshallingCodeCFactory {
                 .getProvidedMarshallerFactory("serial");
 // Создал объект MarshallingConfiguration и настроил номер версии как 5
         final MarshallingConfiguration configuration = new MarshallingConfiguration();
-        //configuration.setVersion(5);
+        configuration.setVersion(5);
 // Создаем провайдера на основе marshallerFactory и конфигурации
         UnmarshallerProvider provider = new DefaultUnmarshallerProvider(
                 marshallerFactory, configuration);

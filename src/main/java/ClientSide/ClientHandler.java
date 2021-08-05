@@ -9,9 +9,7 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.sql.SQLOutput;
 
-/**
- * Created by Administrator on 2017/3/11.
- */
+
 public class ClientHandler extends ChannelInboundHandlerAdapter {
     @Override
     public void channelRead(ChannelHandlerContext ctx, Object msg) throws Exception {
